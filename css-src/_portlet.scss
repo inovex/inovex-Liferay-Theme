@@ -1,0 +1,111 @@
+// color schemed portlets
+
+// basic mixins
+@mixin portlet-bg($shine, $col, $y, $x, $repeat) {
+  $yPos: $y;
+  @if $y == "body" {
+    $yPos: 0px;
+  }
+  background: image_url("inovex/box_#{$shine}#{$col}_full_#{$y}_#{$x}.gif") $x $yPos $repeat;
+}
+@mixin portlet-scheme($shine, $col, $fontCol) {
+
+  // portlet itself
+  @include portlet-bg($shine, all, body, right, repeat-y);
+    
+  .portlet-topper {
+    @include portlet-bg($shine, $col, top, right, no-repeat);
+  }
+  .portlet-title {
+    @include portlet-bg($shine, $col, top, left, no-repeat);
+    color: $fontCol;
+  } 
+  .portlet-content {
+    @include portlet-bg($shine, all, body, left, repeat-y);
+  } 
+  .portlet-footer {
+    @include portlet-bg($shine, all, bottom, right, no-repeat);
+  }
+  .portlet-footer-left {
+    @include portlet-bg($shine, all, bottom, left, no-repeat);
+  }
+}
+
+// colorscheme predefinitions
+@mixin portlet-scheme-white {
+  @include portlet-scheme( "", "white", #999);
+} 
+@mixin portlet-scheme-grey {
+  @include portlet-scheme( "", "grey", #333);
+}
+@mixin portlet-scheme-blue {
+  @include portlet-scheme( "", "blue", #003399);
+}
+@mixin portlet-scheme-orange {
+  @include portlet-scheme( "", "orange", #ff6600);
+}
+@mixin portlet-scheme-darkwhite {
+  @include portlet-scheme("dark", "white", #999);
+}
+@mixin portlet-scheme-darkgrey {
+  @include portlet-scheme("dark", "grey", #333);
+}
+@mixin portlet-scheme-darkblue {
+  @include portlet-scheme("dark", "blue", #003399);
+}
+@mixin portlet-scheme-darkorange {
+  @include portlet-scheme("dark", "orange", #ff6600);
+}
+
+// page instances
+body.white .portlet {
+  @include portlet-scheme-white;
+}
+body.grey .portlet {
+  @include portlet-scheme-grey;
+}
+body.blue .portlet {
+  @include portlet-scheme-blue;
+}
+body.orange .portlet {
+  @include portlet-scheme-orange;
+}
+body.darkwhite .portlet {
+  @include portlet-scheme-darkwhite;
+}
+body.darkgrey .portlet {
+  @include portlet-scheme-darkgrey;
+}
+body.darkblue .portlet{
+  @include portlet-scheme-darkblue;
+}
+body.darkorange .portlet {
+  @include portlet-scheme-darkorange;
+}
+
+// portlet instances
+portlet.white {
+  @include portlet-scheme-white;
+}
+portlet.grey {
+  @include portlet-scheme-grey;
+}
+portlet.blue {
+  @include portlet-scheme-blue;
+}
+portlet.orange {
+  @include portlet-scheme-orange;
+}
+portlet.darkwhite {
+  @include portlet-scheme-darkwhite;
+}
+portlet.darkgrey {
+  @include portlet-scheme-darkgrey;
+}
+portlet.darkblue {
+  @include portlet-scheme-darkblue;
+}
+portlet.darkorange {
+  @include portlet-scheme-darkorange;
+}
+

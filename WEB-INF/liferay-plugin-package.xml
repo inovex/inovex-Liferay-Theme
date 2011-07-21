@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin-package PUBLIC "-//Liferay//DTD Plugin Package 6.0.0//EN" "http://www.liferay.com/dtd/liferay-plugin-package_6_0_0.dtd">
+
+<plugin-package>
+	<name>Inovex Theme</name>
+	<module-id>liferay/inovex-theme/6.0.6.1/war</module-id>
+	<types>
+		<type>theme</type>
+	</types>
+	<tags></tags>
+	<short-description>Supports Liferay 6 Portlet Skins. Just go into Portlet settings and add a css-class (orange, blue, darkorange, darkblue, white, ...)</short-description>
+	<long-description></long-description>
+	<change-log></change-log>
+	<page-url>http://www.inovex.de</page-url>
+	<author>Jens Bissinger, Inovex GmbH</author>
+	<licenses>
+		<license osi-approved="true">MIT</license>
+	</licenses>
+	<liferay-versions>
+		<liferay-version>6.0.6+</liferay-version>
+	</liferay-versions>
+</plugin-package>

@@ -1,0 +1,233 @@
+.dockbar {
+  background: #97a1ae url(../images/dockbar/dockbar_bg.png) repeat-x 0 0;
+  border-bottom: 1px solid #636364;
+  font-size: 13px;
+  padding: 1px 5px;
+  position: relative;
+  z-index: 300;
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden; } }
+
+.ie7 .dockbar {
+  zoom: 1; }
+
+.ie6 {
+  .dockbar, .lfr-dockbar-pinned .dockbar {
+    height: 10px;
+    left: 0;
+    position: relative;
+    top: 0; } }
+
+.dockbar {
+  a {
+    color: #2C2F34;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFF; }
+  .menu-button-active {
+    background: #5c94da url(../images/dockbar/button_active_bg.png) repeat-x 0 0;
+    a {
+      color: #FFF;
+      text-shadow: -1px -1px #2c2f34; } }
+  .user-avatar .sign-out {
+    font-size: 0.8em;
+    padding-left: 0; }
+  ul {
+    margin: 0;
+    padding: 0; }
+  li li {
+    margin-left: 0; } }
+
+html > .lfr-dockbar-pinned {
+  padding-top: 3.45em; }
+
+.lfr-dockbar-pinned .dockbar {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0; }
+
+.dockbar .pin-dockbar {
+  margin-left: 0; }
+
+.ie6 .dockbar .pin-dockbar {
+  display: none; }
+
+.pin-dockbar img {
+  background: url(../images/dockbar/pin.png) no-repeat 0 0;
+  height: 27px;
+  vertical-align: middle;
+  width: 27px; }
+
+.lfr-dockbar-pinned .pin-dockbar img {
+  background-image: url(../images/dockbar/unpin.png); }
+
+.dockbar {
+  .user-portrait {
+    text-decoration: none; }
+  .user-avatar img {
+    vertical-align: middle;
+    width: 25px; }
+  .impersonating-user {
+    background: url(../images/messages/alert.png) no-repeat 0 50%;
+    padding-left: 20px;
+    .user-links a {
+      color: #999; } } }
+
+/* ---------- Menus ---------- */
+
+.aui-dockbarmenu-hidden {
+  visibility: hidden; }
+
+.dockbar {
+  .aui-toolbar {
+    float: left; }
+  .user-toolbar {
+    float: right; } }
+
+.aui-underlay .portal-add-content {
+  background-color: transparent;
+  font-size: 11px;
+  .portlet-dd-placeholder {
+    display: none; } }
+
+.add-application .aui-widget-bd, .dockbar-messages .aui-widget-bd {
+  padding: 0 10px 10px; }
+
+.add-application {
+  left: 10px !important; }
+
+.lfr-has-sidebar #main-content {
+  padding-left: 220px; }
+
+.manage-layouts {
+  left: 60px !important; }
+
+.my-places-menu {
+  max-width: 350px;
+  ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0; }
+  li {
+    display: block;
+    margin: 0;
+    padding: 0; }
+  a {
+    display: block;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap; }
+  .current-site {
+    border: solid #1D4280;
+    border-width: 1px 0;
+    a {
+      background: #3068ba url(../images/arrows/01_right.png) no-repeat scroll 2px 30%;
+      color: #FFF;
+      padding-left: 20px;
+      text-shadow: 1px 1px #333; }
+    .site-type {
+      color: #FFF; }
+    a:hover {
+      color: #FFF;
+      text-shadow: 1px 1px #333; } }
+  a:hover .site-type {
+    color: #FFF;
+    text-shadow: 1px 1px #333; }
+  .site-name {
+    cursor: pointer;
+    float: left; }
+  .site-type {
+    color: #777;
+    float: right;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-left: 10px; } }
+
+.ie7 .my-places-menu .site-type {
+  float: none; }
+
+.my-places-menu a:hover .site-type {
+  color: #FFF; }
+
+.ie7 .my-places-menu {
+  a {
+    overflow: visible;
+    text-align: left; }
+  .site-name, .site-type {
+    float: none; } }
+
+.ie6 .my-places-menu {
+  width: 200px;
+  a {
+    height: 1%; } }
+
+.dockbar .toggle-controls a {
+  background: url(../images/dockbar/checked.png) no-repeat 0 50%;
+  padding-left: 20px; }
+
+.controls-hidden .toggle-controls a {
+  background-image: url(../images/dockbar/unchecked.png); }
+
+.dockbar {
+  .menu-button {
+    background: url(../images/arrows/05_down.png) no-repeat 93% 50%;
+    display: inline-block;
+    padding: 5px 20px 5px 5px;
+    text-decoration: none;
+    span {
+      background: url() no-repeat 0 50%;
+      padding-left: 20px; } }
+  .add-content .menu-button span {
+    background-image: url(../images/common/add.png); }
+  .manage-content .menu-button span {
+    background-image: url(../images/dockbar/settings.png); }
+  .my-places .menu-button span {
+    background-image: url(../images/dockbar/places.png); }
+  .staging-options .menu-button span {
+    background-image: url(../images/dockbar/staging.png); } }
+
+.dockbar-messages-container {
+  left: 50%;
+  margin-left: -150px; }
+
+.dockbar-messages {
+  width: 300px; }
+
+.showing-messages .dockbar-messages {
+  display: block; }
+
+.multiple-messages {
+  .dockbar-message {
+    border-top: 1px solid #CCC;
+    padding: 5px 0; }
+  .first {
+    border-top-width: 0;
+    padding-top: 0; } }
+
+.add-content-menu {
+  .add-page a {
+    background: url(../images/navigation/add_page.png) no-repeat 3px 50%;
+    padding-left: 25px; }
+  .add-application a {
+    background: url(../images/common/portlet.png) no-repeat 3px 50%;
+    padding-left: 25px; } }
+
+.manage-content-menu {
+  li a {
+    background: url() no-repeat 3px 50%;
+    padding-left: 25px; }
+  .manage-page a {
+    background-image: url(../images/dock/page_settings.png); }
+  .page-layout a {
+    background-image: url(../images/dock/layout.png); }
+  .sitemap a {
+    background-image: url(../images/common/sitemap.png); }
+  .settings a {
+    background-image: url(../images/common/configuration.png); }
+  .control-panel a {
+    background-image: url(../images/dock/control_panel.png); } }
